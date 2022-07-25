@@ -1,4 +1,25 @@
 ﻿@page "/List/searchList"
 
-<h3>Search List</h3>
+@*<input value="@PROJECT_JSON" width="600" height="600" />*@
 
+<label>직렬화</label><br/>
+<textarea wrap="hard" rows="5" cols="150" data>@PROJECT_JSON</textarea>
+<br/><br/>
+<button value="" type="button" @onclick="JsonDeSerialize">역직렬화</button>
+<br/>
+<div style="display:grid; grid-template-columns: 100px 100px 100px 250px 100px">
+    @if (Projects != null)
+    {
+        foreach(var item in Projects)
+        {
+            <div>@item.Sabun</div>
+            <div>@item.Name</div>
+            <div>@item.Gender.ToString().Substring(0, 1)</div>
+            <div>@item.Email</div>
+            <div>@item.DepartMent</div>
+        }
+    }
+    
+</div>
+
+@*https://www.tutorialsteacher.com/mvc/htmlhelper-textbox-textboxfor*@
