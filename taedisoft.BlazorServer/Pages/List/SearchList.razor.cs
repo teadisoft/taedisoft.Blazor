@@ -24,8 +24,11 @@ namespace taedisoft.BlazorServer.Pages.List
                ,new ProjectModel() { Sabun=4, Name="우영우", DepartMent="법무팀", Email="youyoungyou@taedisoft.com", Gender =Gender.Female, PhotoPath="444" }
             };
 
-            string jsonString = JsonConvert.SerializeObject(pmList);
+            string jsonString = JsonConvert.SerializeObject(pmList);            
+        }
 
+        public void GetJson()
+        { 
 
         }
     }
