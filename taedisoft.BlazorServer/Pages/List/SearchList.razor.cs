@@ -10,15 +10,6 @@ namespace taedisoft.BlazorServer.Pages.List
         //public IEnumerable<ProjectModel> Projects { get; set; } = Enumerable.Empty<ProjectModel>();
         public List<ProjectModel> Projects { get; set; }
 
-        public string PROJECT_JSON { get; set; } = String.Empty;
-
-        /// <summary>
-        /// ASP.NET Core Razor 구성 요소 수명 주기
-        /// https://docs.microsoft.com/ko-kr/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0 
-        /// async/await : https://docs.microsoft.com/ko-kr/dotnet/csharp/programming-guide/concepts/async/ 
-        /// OnInitializedAsync
-        /// </summary>
-        /// <returns></returns>
         protected override async Task OnInitializedAsync()
         {
             await Task.Run(JsonSerialize);
