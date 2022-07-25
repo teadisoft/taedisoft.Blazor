@@ -8,7 +8,9 @@ namespace taedisoft.BlazorServer.Pages.List
     {
 
         //public IEnumerable<ProjectModel> Projects { get; set; } = Enumerable.Empty<ProjectModel>();
-        public List<ProjectModel> Projects { get; set; }
+        public List<ProjectModel>? Projects { get; set; }
+
+        public string PROJECT_JSON { get; set; } = string.Empty;
 
         protected override async Task OnInitializedAsync()
         {
