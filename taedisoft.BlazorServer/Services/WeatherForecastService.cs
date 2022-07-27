@@ -65,7 +65,7 @@ namespace taedisoft.BlazorServer.Services
         {
             get
             {
-                
+                if (_forecasts == null)
                     _forecasts = CreateForecast();
                 return _forecasts;
             }
