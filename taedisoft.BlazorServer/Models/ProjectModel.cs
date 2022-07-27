@@ -10,13 +10,13 @@
         public Gender Gender { get; set; }
         public string? PhotoPath { get; set; }
 
-        public List<ProjectModel>? ProjectList { get; set; }
+        public IEnumerable<ProjectModel>? ProjectList { get; set; }
 
         public void GetList()
         {
             if (ProjectList == null)
             {
-                List<ProjectModel> pmList = new()
+                IEnumerable<ProjectModel> pmList =new List<ProjectModel>()
                 {
                     new ProjectModel() { Sabun=1, Name="홍길동", DepartMent="개발팀", Email="gildong@taedisoft.com", Gender =Gender.Male, PhotoPath="111" }
                    ,new ProjectModel() { Sabun=2, Name="이순신", DepartMent="총괄팀", Email="sunsin@taedisoft.com", Gender =Gender.Male, PhotoPath="222" }

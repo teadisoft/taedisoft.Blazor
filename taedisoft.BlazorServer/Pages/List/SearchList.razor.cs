@@ -8,7 +8,7 @@ namespace taedisoft.BlazorServer.Pages.List
     public partial class SearchList : ComponentBase
     {
         //public IEnumerable<ProjectModel> Projects { get; set; } = Enumerable.Empty<ProjectModel>();
-        public List<ProjectModel>? Projects { get; set; }
+        public IEnumerable<ProjectModel>? Projects { get; set; }
         private ProjectModel pm = new ProjectModel();
 
         public string PROJECT_JSON { get; set; } = string.Empty;

@@ -13,7 +13,7 @@ namespace taedisoft.BlazorServer.Utils
         /// <typeparam name="T"></typeparam>
         /// <param name="list"></param>
         /// <returns></returns>
-        public static string GetJsonString<T>(List<T>? list)
+        public static string GetJsonString<T>(IEnumerable<T>? list)
         {
             return JsonConvert.SerializeObject(list);
         }
@@ -24,7 +24,7 @@ namespace taedisoft.BlazorServer.Utils
         /// <typeparam name="T"></typeparam>
         /// <param name="json"></param>
         /// <returns></returns>
-        public static List<T>? GetJsonModel<T>(string json)
+        public static IEnumerable<T>? GetJsonModel<T>(string json)
         {
             return JsonConvert.DeserializeObject<List<T>>(json);
         }
