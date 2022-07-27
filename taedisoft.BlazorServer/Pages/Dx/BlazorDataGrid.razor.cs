@@ -5,25 +5,25 @@ namespace taedisoft.BlazorServer.Pages.Dx
 {
     public partial class BlazorDataGrid : ComponentBase
     {
-        //public List<ProjectModel>? prjList { get; set; }
-
-       // IEnumerable<ProjectModel>? prjList { get; set; }
-
-        //public object prjList { get; set; }
-
-
-        //ProjectModel pm = new ProjectModel();
-
-        //protected override async Task OnInitializedAsync()
+        //async Task OnRowRemoving(WeatherForecastModel dataItem)
         //{
-        //    await Task.Run(GetData);
+        //    await ForecastService.Remove(dataItem);
         //}
-
-        //protected void GetData()
+        //async Task OnRowUpdating(WeatherForecastModel dataItem, IDictionary<string, object> newValue)
         //{
-        //    pm.GetList();
-        //    prjList = pm.ProjectList;
+        //    await ForecastService.Update(dataItem, newValue);
         //}
-
+        //async Task OnRowInserting(IDictionary<string, object> newValue)
+        //{
+        //    await ForecastService.Insert(newValue);
+        //}
+        //Task OnInitNewRow(Dictionary<string, object> values)
+        //{
+        //    values.Add("Date", DateTime.Now);
+        //    values.Add("TemperatureC", 13);
+        //    values.Add("Forecast", "Warm");
+        //    values.Add("CloudCover", "Sunny");
+        //    return Task.CompletedTask;
+        //}
     }
 }

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-
+using taedisoft.BlazorServer.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
+// 필히 추가
+builder.Services.AddScoped<WeatherForecastService>();
+builder.Services.AddDevExpressBlazor();
 
 var app = builder.Build();
 
