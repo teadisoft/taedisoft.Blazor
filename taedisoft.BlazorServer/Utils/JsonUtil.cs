@@ -26,7 +26,7 @@ namespace taedisoft.BlazorServer.Utils
         /// <returns></returns>
         public static IEnumerable<T>? GetJsonModel<T>(string json)
         {
-            return JsonConvert.DeserializeObject<List<T>>(json);
+            return JsonConvert.DeserializeObject<IEnumerable<T>>(json);
         }
     }
 }
