@@ -1,5 +1,6 @@
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
+using DevExpress.Entity.Model;
+using Microsoft.Net.Http.Headers;
+using System.Net.Http.Headers;
 using taedisoft.BlazorServer.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,10 +8,19 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-
-// 필히 추가
-builder.Services.AddScoped<WeatherForecastService>();
 builder.Services.AddDevExpressBlazor();
+
+builder.Services.AddScoped<WeatherForecastService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+
+builder.Services.AddHttpClient("_Host", c => c.BaseAddress = new Uri("https://localhost:5001"));
+//builder.Services.AddHttpClient("_Host", c => c.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress);
+
+//builder.Services.AddScoped(sp =>
+//    new HttpClient
+//    {
+//        BaseAddress = new Uri("https://localhost:5001")
+//    });
 
 var app = builder.Build();
 
@@ -23,11 +33,9 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 

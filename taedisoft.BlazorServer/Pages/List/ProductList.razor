@@ -1,0 +1,20 @@
+﻿@page "/List/ProductList"
+
+@using taedisoft.Blazor.DataModels;
+@using taedisoft.BlazorServer.Services;
+
+
+<h3>Product Details</h3>
+
+@if (Projects != null)
+{
+    foreach (var item in Projects)
+    {
+        <div>
+            <div>@item.Id</div>
+            <div>@item.Name</div>
+            <div>@item.Price</div>
+            <div>@item.Quantity</div>
+        </div>
+    }
+}

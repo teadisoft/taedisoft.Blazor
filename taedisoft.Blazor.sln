@@ -5,6 +5,10 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "taedisoft.BlazorServer", "taedisoft.BlazorServer\taedisoft.BlazorServer.csproj", "{8B47DF3A-CCAE-4A6E-9265-994D811F62A7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "taedisoft.Blazor.API", "taedisoft.BlazorServer.API\taedisoft.Blazor.API.csproj", "{1349C09F-E796-451F-9737-57697CD4C862}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taedisoft.Blazor.DataModels", "taedisoft.Blazor.Models\taedisoft.Blazor.DataModels.csproj", "{8647D284-8F64-402B-AB07-BC123EA111D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{8B47DF3A-CCAE-4A6E-9265-994D811F62A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B47DF3A-CCAE-4A6E-9265-994D811F62A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B47DF3A-CCAE-4A6E-9265-994D811F62A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1349C09F-E796-451F-9737-57697CD4C862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1349C09F-E796-451F-9737-57697CD4C862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1349C09F-E796-451F-9737-57697CD4C862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1349C09F-E796-451F-9737-57697CD4C862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8647D284-8F64-402B-AB07-BC123EA111D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8647D284-8F64-402B-AB07-BC123EA111D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8647D284-8F64-402B-AB07-BC123EA111D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8647D284-8F64-402B-AB07-BC123EA111D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

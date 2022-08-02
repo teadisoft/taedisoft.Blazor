@@ -3,7 +3,7 @@
 @using taedisoft.BlazorServer.Models
 @using taedisoft.BlazorServer.Services
 @inject WeatherForecastService ForecastService
-
+@inject IHttpClientFactory ClientFactory
 
 <DxDataGrid DataAsync="@ForecastService.GetForecastAsync"
             PageSize="5"
