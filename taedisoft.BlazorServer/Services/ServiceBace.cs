@@ -13,5 +13,11 @@
 
             // https://stackoverflow.com/questions/64610237/net-5-0-cannot-determine-the-frame-size-or-a-corrupted-frame-was-received
         }
+
+        public enum DefaultRoute
+        { 
+            Api,
+            ProductApi
+        }
     }
 }
