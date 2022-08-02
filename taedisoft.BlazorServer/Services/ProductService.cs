@@ -4,21 +4,15 @@ using taedisoft.Blazor.DataModels;
 
 namespace taedisoft.BlazorServer.Services
 {
-    public class ProductService : IProductService
+    public class ProductService : ServiceBace, IProductService
     {
-        private readonly HttpClient client;
-
-        public ProductService(HttpClient client)
+        public ProductService()
         {
-            this.client = client;
         }
 
         public async Task<IEnumerable<Product>> GetProducts()
         {
-            client.BaseAddress = new Uri("http://localhost:5001");
-            client.DefaultRequestHeaders.Add("Accept", "Application/json");
-
-            return await client.GetFromJsonAsync<IEnumerable<Product>>("api/GetProducts"); 
+            return await httpClient.GetFromJsonAsync<IEnumerable<Product>>("api/GetProducts");
         }
     }
 }

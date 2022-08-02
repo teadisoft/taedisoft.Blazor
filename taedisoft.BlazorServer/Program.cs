@@ -13,7 +13,7 @@ builder.Services.AddDevExpressBlazor();
 builder.Services.AddScoped<WeatherForecastService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 
-builder.Services.AddHttpClient("_Host", c => c.BaseAddress = new Uri("https://localhost:5001"));
+builder.Services.AddHttpClient("_Host", c => c.BaseAddress = new Uri("http://localhost:5001"));
 //builder.Services.AddHttpClient("_Host", c => c.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress);
 
 //builder.Services.AddScoped(sp =>

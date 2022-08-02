@@ -10,7 +10,7 @@
 {
     foreach (var item in Projects)
     {
-        <div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr">
             <div>@item.Id</div>
             <div>@item.Name</div>
             <div>@item.Price</div>
@@ -18,3 +18,4 @@
         </div>
     }
 }
+ 
