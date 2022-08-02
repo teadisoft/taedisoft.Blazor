@@ -12,7 +12,9 @@ namespace taedisoft.BlazorServer.Services
 
         public async Task<IEnumerable<Product>> GetProducts()
         {
-            return await httpClient.GetFromJsonAsync<IEnumerable<Product>>($"{DefaultRoute.Api}/GetProducts");
+            string route = $"{ApiCategry.Project}/{MethodCategry.Search}";
+            return await httpClient.GetFromJsonAsync<IEnumerable<Product>>(route);
         }
     }
 }
+    

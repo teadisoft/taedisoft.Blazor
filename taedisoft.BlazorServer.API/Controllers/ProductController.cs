@@ -9,7 +9,7 @@ namespace taedisoft.Blazor.API.Controllers
     public class ProductController : ControllerBase
     {
         [HttpGet]
-        [Route("api/GetProducts")]
+        [Route("Project/Search")]
         public IActionResult GetProducts()
         {
             List<Product> productList = new()

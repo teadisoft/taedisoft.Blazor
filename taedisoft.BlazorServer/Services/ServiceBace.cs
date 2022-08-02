@@ -14,10 +14,20 @@
             // https://stackoverflow.com/questions/64610237/net-5-0-cannot-determine-the-frame-size-or-a-corrupted-frame-was-received
         }
 
-        public enum DefaultRoute
+        public enum ApiCategry
         { 
-            Api,
-            ProductApi
+            WorkSpace, 
+            Application,
+            Project
+        }
+
+        public enum MethodCategry
+        { 
+            Search,
+            ById,
+            Create,
+            Update,
+            Delete
         }
     }
 }
